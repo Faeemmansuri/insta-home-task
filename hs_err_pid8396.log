@@ -1,0 +1,196 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes for Failed to commit area from 0x0000000702400000 to 0x0000000712200000 of length 266338304.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3301), pid=8396, tid=23236
+#
+# JRE version:  (11.0.10+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.10+9, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea -Dfile.encoding=UTF-8 org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 64718 -testLoaderClass org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader -loaderpluginname org.eclipse.jdt.junit4.runtime -testNameFile C:\Users\FAEEMM~1\AppData\Local\Temp\testNames11441972271715127853.txt
+
+Host: Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz, 8 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1202)
+Time: Sat Oct 23 18:02:44 2021 India Standard Time elapsed time: 0.014121 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002239b4b7800):  JavaThread "Unknown thread" [_thread_in_vm, id=23236, stack(0x0000002c3eb00000,0x0000002c3ec00000)]
+
+Stack: [0x0000002c3eb00000,0x0000002c3ec00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5f35ea]
+V  [jvm.dll+0x77c65e]
+V  [jvm.dll+0x77dd2f]
+V  [jvm.dll+0x77e3f3]
+V  [jvm.dll+0x246c38]
+V  [jvm.dll+0x5f079a]
+V  [jvm.dll+0x5e53c5]
+V  [jvm.dll+0x2fba4c]
+V  [jvm.dll+0x2fb8d2]
+V  [jvm.dll+0x300586]
+V  [jvm.dll+0x344cff]
+V  [jvm.dll+0x344730]
+V  [jvm.dll+0x2d8cb8]
+V  [jvm.dll+0x2d9e06]
+V  [jvm.dll+0x757c77]
+V  [jvm.dll+0x7593ff]
+V  [jvm.dll+0x351a59]
+V  [jvm.dll+0x73aea0]
+V  [jvm.dll+0x3b929f]
+V  [jvm.dll+0x3bb7a1]
+C  [jli.dll+0x520b]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000022399395be0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000002239b4c9800 GCTaskThread "GC Thread#0" [stack: 0x0000002c3ec00000,0x0000002c3ed00000] [id=14176]
+  0x000002239b52c800 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000002c3ed00000,0x0000002c3ee00000] [id=9476]
+  0x000002239b52e000 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000002c3ee00000,0x0000002c3ef00000] [id=1200]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffdc6cd8337]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000002239b4b2740] Heap_lock - owner thread: 0x000002239b4b7800
+
+Heap address: 0x0000000702400000, size: 4060 MB, Compressed Oops mode: Non-zero based: 0x0000000702400000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.009 Loaded shared library C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff6b99c0000 - 0x00007ff6b99cd000 	C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\java.exe
+0x00007ffe50db0000 - 0x00007ffe50fa5000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffe503b0000 - 0x00007ffe5046e000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffe4e9f0000 - 0x00007ffe4ecb9000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffe4e580000 - 0x00007ffe4e680000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffe3a210000 - 0x00007ffe3a227000 	C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\jli.dll
+0x00007ffe271a0000 - 0x00007ffe271b5000 	C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\VCRUNTIME140.dll
+0x00007ffe4f6c0000 - 0x00007ffe4f861000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffe4edd0000 - 0x00007ffe4edf2000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffe4f5a0000 - 0x00007ffe4f5cb000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffe40790000 - 0x00007ffe40a2a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffe4ecc0000 - 0x00007ffe4edcb000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffe50960000 - 0x00007ffe509fe000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffe4e7c0000 - 0x00007ffe4e85d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffe50ab0000 - 0x00007ffe50ae0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffe077a0000 - 0x00007ffe0783b000 	C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\msvcp140.dll
+0x00007ffdc69f0000 - 0x00007ffdc7533000 	C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\server\jvm.dll
+0x00007ffe508b0000 - 0x00007ffe5095c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffe4f870000 - 0x00007ffe4f90b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffe50780000 - 0x00007ffe508aa000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffe4f910000 - 0x00007ffe4f918000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffe36340000 - 0x00007ffe36367000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffe3b400000 - 0x00007ffe3b409000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffe50640000 - 0x00007ffe506ab000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffe48720000 - 0x00007ffe4872a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffe4cd10000 - 0x00007ffe4cd22000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffe3d2c0000 - 0x00007ffe3d2d0000 	C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\verify.dll
+0x00007ffe4ca40000 - 0x00007ffe4cc24000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffe36370000 - 0x00007ffe3639c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffe4e680000 - 0x00007ffe4e703000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffe25a80000 - 0x00007ffe25aa8000 	C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\java.dll
+0x00007ffe3d290000 - 0x00007ffe3d29a000 	C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\jimage.dll
+0x00007ffe22ce0000 - 0x00007ffe22cf7000 	C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\server
+
+VM Arguments:
+jvm_args: -ea -Dfile.encoding=UTF-8 
+java_command: org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 64718 -testLoaderClass org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader -loaderpluginname org.eclipse.jdt.junit4.runtime -testNameFile C:\Users\FAEEMM~1\AppData\Local\Temp\testNames11441972271715127853.txt
+java_class_path (initial): d:\workspace\microsevice\insta-home\target\test-classes;d:\workspace\microsevice\insta-home\target\classes;c:\Users\Faeem Mansuri\.vscode\extensions\redhat.java-1.0.0\server\plugins\org.junit_4.13.0.v20200204-1500.jar;c:\Users\Faeem Mansuri\.vscode\extensions\redhat.java-1.0.0\server\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar;c:\Users\Faeem Mansuri\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.5.5\spring-boot-starter-data-jpa-2.5.5.jar;c:\Users\Faeem Mansuri\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.5.5\spring-boot-starter-aop-2.5.5.jar;c:\Users\Faeem Mansuri\.m2\repository\org\aspectj\aspectjweaver\1.9.7\aspectjweaver-1.9.7.jar;c:\Users\Faeem Mansuri\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.5.5\spring-boot-starter-jdbc-2.5.5.jar;c:\Users\Faeem Mansuri\.m2\repository\com\zaxxer\HikariCP\4.0.3\HikariCP-4.0.3.jar;c:\Users\Faeem Mansuri\.m2\repository\org\springframework\spring-jdbc\5.3.10\spring-jdbc-5.3.10.jar;c:\Users\Faeem Mansuri\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;c:\Users\Faeem Mansuri\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;c:\Users\Faeem Mansuri\.m2\repository\org\hibernate\hibernate-core\5.4.32.Final\hibernate-core-5.4.32.Final.jar;c:\Users\Faeem Mansuri\.m2\repository\org\jboss\logging\jboss-logging\3.4.2.Final\jboss-logging-3.4.2.Final.jar;c:\Users\Faeem Mansuri\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;c:\Users\Faeem Mansuri\.m2\repository\net\bytebuddy\byte-buddy\1.10.22\byte-buddy-1.10.22.jar;c:\Users\Faeem Mansuri\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;c:\Users\Faeem Mansuri\.m2\repository\org\jboss\jandex\2.2.3.Final\jandex-2.2.3.Final.jar;c:\Users\Faeem Mansuri\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;c:\Users\Faeem Mansuri\.m2\repository\org\dom4j\dom4j\2.1
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 266338304                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4257218560                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-hotspot
+CLASSPATH=.;
+PATH=C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin;C:\Python27\;C:\Python27\Scripts;C:\Python39\Scripts\;C:\Python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Java\jdk1.8.0_162\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_162\bin\;D:\nvm;D:\nvm\nodejs;C:\Program Files\Java\jdk1.8.0_162;%ANDROID_HOME%\emulator;%ANDROID_HOME%\tools;%ANDROID_HOME%\tools\bin;%ANDROID_HOME%\platform-tools;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\ProgramData\nvm;C:\Program Files\nodejs;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\apache-maven-3.8.1\bin\;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\Faeem Mansuri\.windows-build-tools\python27\;C:\ProgramData\nvm\v14.15.4\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\Program Files\nodejs\node_modules\windows-build-tools\node_modules\.bin;C:\Program Files\nodejs\node_modules\.bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Java\jdk1.8.0_162\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_162\bin\;D:\nvm;D:\nvm\nodejs;C:\Program Files\Java\jdk1.8.0_162;C:\Users\Faeem Mansuri\AppData\Local\Android\Sdk\emulator;C:\Users\Faeem Mansuri\AppData\Local\Android\Sdk\tools;C:\Users\Faeem Mansuri\AppData\Local\Android\Sdk\tools\bin;C:\Users\Faeem Mansuri\AppData\Local\Android\Sdk\platform-tools;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\
+USERNAME=Faeem Mansuri
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1202)
+OS uptime: 3 days 20:36 hours
+Hyper-V role detected
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 158 stepping 10 microcode 0xd2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 16236M (683M free)
+TotalPageFile size 28571M (AvailPageFile size 78M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 60M, peak: 314M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.10+9) for windows-amd64 JRE (11.0.10+9), built on Jan 20 2021 06:07:07 by "" with MS VC++ 15.9 (VS2017)
+
+END.
